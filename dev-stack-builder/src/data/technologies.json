@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "category": "Frontend",
+    "description": "A JavaScript library for building user interfaces.",
+    "icon": "⚛️",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Popular"
+  },
+  {
+    "id": 2,
+    "name": "JavaScript",
+    "category": "Language",
+    "description": "A versatile programming language for web development.",
+    "icon": "🟨",
+    "rating": 4.8,
+    "difficulty": "Intermediate",
+    "badge": "Essential"
+  },
+  {
+    "id": 3,
+    "name": "TypeScript",
+    "category": "Language",
+    "description": "JavaScript with static typing for scalable applications.",
+    "icon": "🔷",
+    "rating": 4.8,
+    "difficulty": "Intermediate",
+    "badge": "Trending"
+  },
+  {
+    "id": 4,
+    "name": "Node.js",
+    "category": "Backend",
+    "description": "A JavaScript runtime for building server-side applications.",
+    "icon": "🟢",
+    "rating": 4.7,
+    "difficulty": "Intermediate",
+    "badge": "Popular"
+  },
+  {
+    "id": 5,
+    "name": "Next.js",
+    "category": "Frontend",
+    "description": "A React framework for fast and scalable web applications.",
+    "icon": "▲",
+    "rating": 4.8,
+    "difficulty": "Advanced",
+    "badge": "Popular"
+  },
+  {
+    "id": 6,
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "description": "A utility-first CSS framework for building modern interfaces.",
+    "icon": "🎨",
+    "rating": 4.7,
+    "difficulty": "Beginner",
+    "badge": "Trending"
+  },
+  {
+    "id": 7,
+    "name": "MongoDB",
+    "category": "Database",
+    "description": "A flexible NoSQL database for modern applications.",
+    "icon": "🍃",
+    "rating": 4.6,
+    "difficulty": "Intermediate",
+    "badge": "Popular"
+  },
+  {
+    "id": 8,
+    "name": "PostgreSQL",
+    "category": "Database",
+    "description": "A powerful open-source relational database system.",
+    "icon": "🐘",
+    "rating": 4.7,
+    "difficulty": "Advanced",
+    "badge": "Essential"
+  },
+  {
+    "id": 9,
+    "name": "Git",
+    "category": "Tools",
+    "description": "A distributed version control system for developers.",
+    "icon": "🔀",
+    "rating": 4.9,
+    "difficulty": "Beginner",
+    "badge": "Essential"
+  },
+  {
+    "id": 10,
+    "name": "Docker",
+    "category": "DevOps",
+    "description": "A platform for developing and running applications in containers.",
+    "icon": "🐳",
+    "rating": 4.6,
+    "difficulty": "Advanced",
+    "badge": "Trending"
+  },
+  {
+    "id": 11,
+    "name": "Python",
+    "category": "Language",
+    "description": "A versatile language widely used in web development and data science.",
+    "icon": "🐍",
+    "rating": 4.8,
+    "difficulty": "Beginner",
+    "badge": "Popular"
+  },
+  {
+    "id": 12,
+    "name": "Vue.js",
+    "category": "Frontend",
+    "description": "A progressive JavaScript framework for building user interfaces.",
+    "icon": "💚",
+    "rating": 4.6,
+    "difficulty": "Intermediate",
+    "badge": "Trending"
+  }
+]

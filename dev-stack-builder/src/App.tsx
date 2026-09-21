@@ -1,6 +1,12 @@
+import technologies from "./data/technologies.json";
+
 function App() {
+  console.log(technologies);
+
   return (
-    <h1 className="text-4xl font-bold text-pink-500">Dev Stack Builder</h1>
+    <div>
+      <h1>{technologies[0].name}</h1>
+    </div>
   );
 }
 
