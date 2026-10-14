@@ -1,5 +1,15 @@
 # 🧱 A-5 Dev Stack Builder Website
 
+## Run Locally
+
+From the repository root, run:
+
+```bash
+npm run dev
+```
+
+The command starts the Vite app in `dev-stack-builder`.
+
 ## 📅 Deadlines
 - 60 Marks: 13th September, 2026 (11:59 PM ⏱️)
 - 50 Marks: No deadline for 50 marks.
