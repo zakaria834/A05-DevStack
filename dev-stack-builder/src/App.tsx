@@ -3,6 +3,9 @@ import TechnologyGrid from "./components/TechnologyGrid";
 import technologies from "./data/technologies.json";
 import YourStack from "./components/YourStack";
 import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer";
+import logoText from "./assets/logo-text.png";
+
 function App() {
   const [selectedStack, setSelectedStack] = useState<number[]>([]);
   return (
@@ -11,9 +14,12 @@ function App() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#" className="text-xl font-bold">
-            <span className="text-purple-600">DS</span> Dev{" "}
-            <span className="text-pink-500">Stack</span>
+          <a href="#home" className="inline-flex items-center">
+            <img
+              src={logoText}
+              alt="Dev Stack"
+              className="h-10 w-auto object-contain"
+            />
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-slate-600 md:flex">
@@ -71,7 +77,7 @@ function App() {
 
           <div className="flex justify-center">
             <img
-              src="/src/assets/hero.png"
+              src="/src/assets/banner-stack.png"
               alt="Development stack illustration"
               className="w-full max-w-sm object-contain"
             />
@@ -105,6 +111,7 @@ function App() {
             </aside>
           </div>
         </section>
+        <Footer />
       </main>
     </div>
   );
