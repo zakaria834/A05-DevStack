@@ -4,40 +4,80 @@ import technologies from "./data/technologies.json";
 import YourStack from "./components/YourStack";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
+
+import { Menu, X } from "lucide-react";
 import logoText from "./assets/logo-text.png";
 
 function App() {
   const [selectedStack, setSelectedStack] = useState<number[]>([]);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <Toaster position="top-right" />
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+
+      <header className="sticky top-0 z-50 border-b border-slate-100 bg-white">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((open) => !open)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            className="rounded-md p-2 text-slate-600 md:hidden"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
           <a href="#home" className="inline-flex items-center">
             <img
               src={logoText}
               alt="Dev Stack"
-              className="h-10 w-auto object-contain"
+              className="h-9 w-auto object-contain"
             />
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-slate-600 md:flex">
-            <a href="#" className="text-pink-500">
-              Home
-            </a>
+            <a href="#home">Home</a>
             <a href="#technologies">Technologies</a>
             <a href="#projects">Projects</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </div>
 
-          <div className="flex items-center gap-4 text-sm">
-            <button className="text-slate-600">Sign In</button>
-            <button className="rounded-full bg-pink-600 px-5 py-2 text-white">
+          <div className="flex items-center gap-3 text-sm sm:gap-4">
+            <button type="button" className="text-slate-600">
+              Sign In
+            </button>
+            <button
+              type="button"
+              className="rounded-full bg-pink-600 px-4 py-2 text-white sm:px-5"
+            >
               Sign Up
             </button>
           </div>
+
+          {isMenuOpen && (
+            <div className="absolute left-0 right-0 top-full border-t border-slate-100 bg-white p-3 shadow-lg md:hidden">
+              {[
+                ["Home", "#home"],
+                ["Technologies", "#technologies"],
+                ["Projects", "#projects"],
+                ["About", "#about"],
+                ["Contact", "#contact"],
+              ].map(([label, href]) => (
+                <a
+                  key={label}
+                  href={href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block rounded-lg px-4 py-3 text-sm text-slate-700 hover:bg-pink-50 hover:text-pink-600"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          )}
         </nav>
       </header>
 
