@@ -1,4 +1,4 @@
-import type { Technology } from "./TechnologyCard";
+import { technologyIcons, type Technology } from "./TechnologyCard";
 import toast from "react-hot-toast";
 type YourStackProps = {
   selectedStack: number[];
@@ -56,31 +56,48 @@ function YourStack({
         </div>
       ) : (
         <div className="space-y-2">
-          {myStack.map((technology) => (
-            <div
-              key={technology.id}
-              className="flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-3"
-            >
-              <span className="text-xl">{technology.icon}</span>
-              <div className="min-w-0 flex-1">
-                <h3 className="truncate text-xs font-semibold text-slate-800">
-                  {technology.name}
-                </h3>
-                <p className="text-[10px] text-slate-400">
-                  {technology.category}
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => handleRemove(technology.id)}
-                aria-label={`Remove ${technology.name}`}
-                title={`Remove ${technology.name}`}
-                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-xl text-slate-400 transition hover:bg-rose-50 hover:text-rose-600"
+          {myStack.map((technology) => {
+            const icon =
+              technologyIcons[technology.icon as keyof typeof technologyIcons];
+
+            return (
+              <div
+                key={technology.id}
+                className="flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-3"
               >
-                ×
-              </button>
-            </div>
-          ))}
+                {icon && (
+                  <svg
+                    role="img"
+                    aria-label={technology.name}
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6 shrink-0 rounded-md"
+                    fill={`#${icon.hex}`}
+                  >
+                    <path d={icon.path} />
+                  </svg>
+                )}
+
+                <div className="min-w-0 flex-1">
+                  <h3 className="truncate text-xs font-semibold text-slate-800">
+                    {technology.name}
+                  </h3>
+                  <p className="text-[10px] text-slate-400">
+                    {technology.category}
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => handleRemove(technology.id)}
+                  aria-label={`Remove ${technology.name}`}
+                  title={`Remove ${technology.name}`}
+                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-xl text-slate-400 transition hover:bg-rose-50 hover:text-rose-600"
+                >
+                  ×
+                </button>
+              </div>
+            );
+          })}
         </div>
       )}
 

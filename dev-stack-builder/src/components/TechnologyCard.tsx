@@ -29,7 +29,7 @@ type TechnologyCardProps = {
   selectedStack: number[];
   setSelectedStack: React.Dispatch<React.SetStateAction<number[]>>;
 };
-const technologyIcons = {
+export const technologyIcons = {
   react: siReact,
   javascript: siJavascript,
   typescript: siTypescript,
