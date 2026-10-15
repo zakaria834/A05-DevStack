@@ -4,7 +4,7 @@ import technologyData from "./data/technologies.json";
 import YourStack from "./components/YourStack";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
-
+import bannerStack from "./assets/banner-stack.png";
 import { Menu, X } from "lucide-react";
 import logoText from "./assets/logo-text.png";
 
@@ -124,7 +124,7 @@ function App() {
 
           <div className="flex justify-center">
             <img
-              src="/src/assets/banner-stack.png"
+              src={bannerStack}
               alt="Development stack illustration"
               className="w-full max-w-sm object-contain"
             />
