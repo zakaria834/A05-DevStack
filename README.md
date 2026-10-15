@@ -11,6 +11,7 @@ npm run dev
 The command starts the Vite app in `dev-stack-builder`.
 
 ## 📅 Deadlines
+
 - 60 Marks: 13th September, 2026 (11:59 PM ⏱️)
 - 50 Marks: No deadline for 50 marks.
 - 30 Marks: Any time after the 60 marks window.
@@ -18,19 +19,19 @@ The command starts the Vite app in `dev-stack-builder`.
 ---
 
 ## 🚫 Key Rules
+
 - Don't ask about mark distribution in the group. We don't provide it.
 - Don't post assignment feedback after you receive it. If you face any problem or have any complaints, join a support session and discuss it.
 - Don't use any lorem ipsum text, rather use relevant and meaningful text content.
 - You can change the color if you want, but remember that it should not be a gobindo color.
 - Use at least 8 git commits with meaningful messages.
 
-
-
 ---
 
 ## 🧩 Features & Requirements (50 Marks)
 
 ### 🧭 Navbar
+
 - Navbar designed according to the UI.
 - Left: brand logo + "Dev Stack" name.
 - Center: nav links — Home, Technologies, Projects, About, Contact.
@@ -40,6 +41,7 @@ The command starts the Vite app in `dev-stack-builder`.
 ---
 
 ### 🍔 Mobile Navbar
+
 - On small devices the navbar has three parts:
   - Left: hamburger menu icon
   - Center: brand logo
@@ -50,6 +52,7 @@ The command starts the Vite app in `dev-stack-builder`.
 ---
 
 ### 🎯 Banner / Hero
+
 - Banner section includes:
   - Heading (two-tone: plain text + gradient text)
   - Description text
@@ -59,7 +62,9 @@ The command starts the Vite app in `dev-stack-builder`.
 ---
 
 ### 📦 JSON Data
+
 Create 10-15 technology data with:
+
 - id
 - name
 - category (Frontend / Backend / Database / Language / Styling / DevOps / Tools)
@@ -103,6 +108,7 @@ Create 10-15 technology data with:
 ---
 
 ### 🃏 Technology Cards
+
 - Display all technologies in a 3-column layout (responsive: 1 column on mobile, 2 on tablet).
 - Each card includes:
   - Icon
@@ -117,17 +123,19 @@ Create 10-15 technology data with:
 ---
 
 ### 🧰 Your Stack Section (Sidebar)
+
 - A "Your Stack" panel sits beside the technology grid.
 - Shows a heading and the selected count — example: "2 Technology Selected".
 - By default the panel shows an empty message.
 
-| Empty state | With selected items |
-| --- | --- |
+| Empty state                                     | With selected items                               |
+| ----------------------------------------------- | ------------------------------------------------- |
 | ![Your Stack empty](./ui/YourStack-without.png) | ![Your Stack with items](./ui/YourStack-with.png) |
 
 ---
 
 ### ➕ Add to Stack Functionality
+
 - Clicking "Add to Stack" adds that technology to the "Your Stack" panel.
 - Each stack item shows: icon, name, category, and a remove (✕) button.
 - Stack layout: 1 column.
@@ -138,12 +146,14 @@ Create 10-15 technology data with:
 ---
 
 ### ❌ Remove Functionality
+
 - Clicking the ✕ button on a stack item removes only that item from the stack.
 - "Remove All" button clears the whole stack at once.
 
 ---
 
 ### 🦶 Footer
+
 - Footer designed based on the UI.
 - Brand block: logo, name, short description, social links (GitHub, Twitter, LinkedIn).
 - Three link groups: Product, Company, Legal.
@@ -152,6 +162,7 @@ Create 10-15 technology data with:
 ---
 
 ### 📱 Responsive Design
+
 - Fully responsive across mobile, tablet, and desktop.
 - Follow standard responsive practices.
 
@@ -160,23 +171,27 @@ Create 10-15 technology data with:
 # 🚀 Challenges Part (10 Marks)
 
 ### 🔔 Use a NPM Package React-Toastify
+
 - Use react-toastify to show alerts for: add to stack, duplicate add attempt, remove, and remove all.
 
 ---
 
 ### ⏳ Loading State
+
 - Show a loading message/spinner while the JSON data is being fetched.
 - Note: since the JSON is a local file, the loading state may only be visible for a few milliseconds and can be hard to catch on screen. That is completely fine — the requirement is that the loading state exists and works, not that it stays visible for long.
 
 ---
 
 ### 🎨 Gradient Brand Theme
+
 - Use one shared gradient (orange → pink → violet) for the brand name, hero heading highlight, and primary buttons.
 - Define the gradient in one place so the whole UI can be re-themed by changing a single value.
 
 ---
 
 ### 📂 GitHub Repository
+
 - Create a beautiful GitHub Readme with the following description:
   - Name of your project
   - A little description
@@ -195,6 +210,7 @@ Create 10-15 technology data with:
 ---
 
 ## ⚙️ Technology You Can Use
+
 - React.js
 - Tailwind CSS, DaisyUI
 - TypeScript / JavaScript (ES6+)
@@ -221,5 +237,6 @@ You can use image URLs from Google or from anywhere you like. A good source with
 ---
 
 ## 📤 What to submit:
+
 - GitHub Repository Link:
 - Live Site Link:

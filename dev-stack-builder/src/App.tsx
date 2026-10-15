@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TechnologyGrid from "./components/TechnologyGrid";
-import technologies from "./data/technologies.json";
+import technologyData from "./data/technologies.json";
 import YourStack from "./components/YourStack";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
@@ -10,14 +10,21 @@ import logoText from "./assets/logo-text.png";
 
 function App() {
   const [selectedStack, setSelectedStack] = useState<number[]>([]);
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [technologies, setTechnologies] = useState<typeof technologyData>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTechnologies(technologyData);
+    setIsLoading(false);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <Toaster position="top-right" />
-      {/* Header */}
 
+      {/* Header */}
       <header className="sticky top-0 z-50 border-b border-slate-100 bg-white">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
           <button
@@ -82,7 +89,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <main>
+      <main id="home">
         <section className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-2">
           <div>
             <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">
@@ -134,23 +141,67 @@ function App() {
               Pick one technology per category to build your ideal stack.
             </p>
           </div>
-          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
-            <div className="lg:col-span-2">
-              <TechnologyGrid
-                selectedStack={selectedStack}
-                setSelectedStack={setSelectedStack}
-              />
-            </div>
 
-            <aside className="lg:sticky lg:top-6">
-              <YourStack
-                selectedStack={selectedStack}
-                setSelectedStack={setSelectedStack}
-                technologies={technologies}
-              />
-            </aside>
-          </div>
+          {isLoading ? (
+            <div
+              className="relative flex min-h-[420px] flex-col items-center justify-center overflow-hidden rounded-3xl border border-slate-100 bg-gradient-to-br from-white via-pink-50/40 to-violet-50/50 px-6 text-center"
+              role="status"
+              aria-live="polite"
+            >
+              {/* Soft background glow */}
+              <div className="absolute -left-12 top-12 h-32 w-32 rounded-full bg-orange-200/30 blur-3xl" />
+              <div className="absolute -right-12 bottom-8 h-40 w-40 rounded-full bg-purple-200/40 blur-3xl" />
+
+              {/* Animated loader */}
+              <div className="relative mb-8 flex h-24 w-24 items-center justify-center">
+                <div className="absolute inset-0 animate-spin rounded-full border-[3px] border-transparent border-t-orange-400 border-r-pink-500 border-b-purple-500" />
+
+                <div className="absolute inset-2 rounded-full bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100 shadow-inner" />
+
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-400 via-pink-500 to-purple-600 text-xl font-black text-white shadow-lg shadow-pink-200">
+                  D
+                </div>
+              </div>
+
+              {/* Loading text */}
+              <h3 className="relative text-2xl font-extrabold tracking-tight text-slate-800 sm:text-3xl">
+                Loading{" "}
+                <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+                  Technologies...
+                </span>
+              </h3>
+
+              <p className="relative mt-3 max-w-sm text-sm leading-6 text-slate-500">
+                Preparing your tools to build the perfect development stack.
+              </p>
+
+              {/* Animated dots */}
+              <div className="relative mt-6 flex items-center gap-2">
+                <span className="h-2 w-2 animate-bounce rounded-full bg-orange-400" />
+                <span className="h-2 w-2 animate-bounce rounded-full bg-pink-500 [animation-delay:150ms]" />
+                <span className="h-2 w-2 animate-bounce rounded-full bg-purple-500 [animation-delay:300ms]" />
+              </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
+              <div className="lg:col-span-2">
+                <TechnologyGrid
+                  selectedStack={selectedStack}
+                  setSelectedStack={setSelectedStack}
+                />
+              </div>
+
+              <aside className="lg:sticky lg:top-6">
+                <YourStack
+                  selectedStack={selectedStack}
+                  setSelectedStack={setSelectedStack}
+                  technologies={technologies}
+                />
+              </aside>
+            </div>
+          )}
         </section>
+
         <Footer />
       </main>
     </div>
