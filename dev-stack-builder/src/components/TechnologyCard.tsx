@@ -1,4 +1,18 @@
 import toast from "react-hot-toast";
+import {
+  siReact,
+  siJavascript,
+  siTypescript,
+  siNodedotjs,
+  siNextdotjs,
+  siTailwindcss,
+  siMongodb,
+  siPostgresql,
+  siGit,
+  siDocker,
+  siPython,
+  siVuedotjs,
+} from "simple-icons/icons";
 export type Technology = {
   id: number;
   name: string;
@@ -15,7 +29,20 @@ type TechnologyCardProps = {
   selectedStack: number[];
   setSelectedStack: React.Dispatch<React.SetStateAction<number[]>>;
 };
-
+const technologyIcons = {
+  react: siReact,
+  javascript: siJavascript,
+  typescript: siTypescript,
+  nodedotjs: siNodedotjs,
+  nextdotjs: siNextdotjs,
+  tailwindcss: siTailwindcss,
+  mongodb: siMongodb,
+  postgresql: siPostgresql,
+  git: siGit,
+  docker: siDocker,
+  python: siPython,
+  vuedotjs: siVuedotjs,
+};
 function TechnologyCard({
   technology,
   selectedStack,
@@ -30,11 +57,22 @@ function TechnologyCard({
 
     toast.success(`${technology.name} added to your stack!`);
   }
+  const icon = technologyIcons[technology.icon as keyof typeof technologyIcons];
   return (
     <div className="flex h-full flex-col rounded-xl border border-slate-100 bg-white p-3.5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md">
       {/* Icon and Badge */}
       <div className="mb-3 flex items-center justify-between">
-        <span className="text-2xl">{technology.icon}</span>
+        {icon && (
+          <svg
+            role="img"
+            aria-label={technology.name}
+            viewBox="0 0 24 24"
+            className="h-7 w-7 shrink-0"
+            fill={`#${icon.hex}`}
+          >
+            <path d={icon.path} />
+          </svg>
+        )}
 
         <span className="rounded-full bg-sky-50 px-2.5 py-1 text-[10px] font-medium text-sky-600">
           {technology.badge}

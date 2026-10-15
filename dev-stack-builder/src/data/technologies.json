@@ -4,7 +4,7 @@
     "name": "React",
     "category": "Frontend",
     "description": "A JavaScript library for building user interfaces.",
-    "icon": "⚛️",
+    "icon": "react",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "Popular"
@@ -14,7 +14,7 @@
     "name": "JavaScript",
     "category": "Language",
     "description": "A versatile programming language for web development.",
-    "icon": "🟨",
+    "icon": "javascript",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Essential"
@@ -24,7 +24,7 @@
     "name": "TypeScript",
     "category": "Language",
     "description": "JavaScript with static typing for scalable applications.",
-    "icon": "🔷",
+    "icon": "typescript",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Trending"
@@ -34,7 +34,7 @@
     "name": "Node.js",
     "category": "Backend",
     "description": "A JavaScript runtime for building server-side applications.",
-    "icon": "🟢",
+    "icon": "nodedotjs",
     "rating": 4.7,
     "difficulty": "Intermediate",
     "badge": "Popular"
@@ -44,7 +44,7 @@
     "name": "Next.js",
     "category": "Frontend",
     "description": "A React framework for fast and scalable web applications.",
-    "icon": "▲",
+    "icon": "nextdotjs",
     "rating": 4.8,
     "difficulty": "Advanced",
     "badge": "Popular"
@@ -54,7 +54,7 @@
     "name": "Tailwind CSS",
     "category": "Frontend",
     "description": "A utility-first CSS framework for building modern interfaces.",
-    "icon": "🎨",
+    "icon": "tailwindcss",
     "rating": 4.7,
     "difficulty": "Beginner",
     "badge": "Trending"
@@ -64,7 +64,7 @@
     "name": "MongoDB",
     "category": "Database",
     "description": "A flexible NoSQL database for modern applications.",
-    "icon": "🍃",
+    "icon": "mongodb",
     "rating": 4.6,
     "difficulty": "Intermediate",
     "badge": "Popular"
@@ -74,7 +74,7 @@
     "name": "PostgreSQL",
     "category": "Database",
     "description": "A powerful open-source relational database system.",
-    "icon": "🐘",
+    "icon": "postgresql",
     "rating": 4.7,
     "difficulty": "Advanced",
     "badge": "Essential"
@@ -84,7 +84,7 @@
     "name": "Git",
     "category": "Tools",
     "description": "A distributed version control system for developers.",
-    "icon": "🔀",
+    "icon": "git",
     "rating": 4.9,
     "difficulty": "Beginner",
     "badge": "Essential"
@@ -94,7 +94,7 @@
     "name": "Docker",
     "category": "DevOps",
     "description": "A platform for developing and running applications in containers.",
-    "icon": "🐳",
+    "icon": "docker",
     "rating": 4.6,
     "difficulty": "Advanced",
     "badge": "Trending"
@@ -104,7 +104,7 @@
     "name": "Python",
     "category": "Language",
     "description": "A versatile language widely used in web development and data science.",
-    "icon": "🐍",
+    "icon": "python",
     "rating": 4.8,
     "difficulty": "Beginner",
     "badge": "Popular"
@@ -114,7 +114,7 @@
     "name": "Vue.js",
     "category": "Frontend",
     "description": "A progressive JavaScript framework for building user interfaces.",
-    "icon": "💚",
+    "icon": "vuedotjs",
     "rating": 4.6,
     "difficulty": "Intermediate",
     "badge": "Trending"

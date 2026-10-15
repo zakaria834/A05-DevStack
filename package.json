@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
+    "simple-icons": "^16.35.0",
     "tailwindcss": "^4.3.3"
   }
 }
